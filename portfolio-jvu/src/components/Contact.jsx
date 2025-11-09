@@ -114,21 +114,21 @@ const Contact = () => {
         {/* Enlaces a los CVs */}
         <div className="cv-links">
           <a
-            href="./cv-es.pdf"
+            href="/cv-es.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
             CV Español
           </a>
           <a
-            href="./cv-en.pdf"
+            href="/cv-en.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
             CV Inglés
           </a>
           <a
-            href="./cv-pt.pdf"
+            href="/cv-pt.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
