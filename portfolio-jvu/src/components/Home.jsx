@@ -64,24 +64,24 @@ const Home = () => {
           </a>
         </div>
 
-        {/* Enlaces CV */}
+        {/* Enlaces a los CVs */}
         <div className="cv-links">
           <a
-            href={`${import.meta.env.BASE_URL}cv-es.pdf`}
+            href="/cv-es.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
             CV Español
           </a>
           <a
-            href={`${import.meta.env.BASE_URL}cv-en.pdf`}
+            href="/cv-en.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
             CV Inglés
           </a>
           <a
-            href={`${import.meta.env.BASE_URL}cv-pt.pdf`}
+            href="/cv-pt.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
