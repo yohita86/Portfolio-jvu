@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 * {
   margin: 0;
@@ -7,13 +7,15 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #0e0e10 40%, #5a189a 100%);
   color: #f5f5f5;
   scroll-behavior: smooth;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #9d4edd;
 }
 
@@ -50,6 +52,70 @@ section {
   color: #9d4edd;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.logo-img {
+  height: 50px; /* ajusta según tu gusto */
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
+/* =================== NAVBAR MÓVIL =================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .header nav {
+    position: fixed;
+    top: 70px; /* debajo del header */
+    right: 0;
+    background: rgba(14, 14, 16, 0.95);
+    height: calc(100vh - 70px);
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    gap: 25px; /* espacio entre enlaces */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto; /* scroll si hay muchos links */
+    display: flex;
+  }
+
+  .header nav.nav-open {
+    transform: translateX(0);
+  }
+
+  .header a {
+    margin: 0;
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #7b2cbf;
+  }
+}
+
+/* =================== HERO =================== */
 .hero {
   display: flex;
   flex-direction: column;
@@ -172,7 +238,7 @@ section {
 
 .skills-grid {
   display: flex;
-  flex-wrap: wrap; /* bajan solo si no entran */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
   width: 100%;
@@ -184,17 +250,17 @@ section {
   border: 1px solid #9d4edd;
   border-radius: 12px;
   padding: 16px;
-  width: 220px; /* compacto */
+  width: 220px;
   min-width: 200px;
   text-align: center;
   color: #f5f5f5;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .skill-card h3 {

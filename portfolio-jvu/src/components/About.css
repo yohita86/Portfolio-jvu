@@ -1,28 +1,63 @@
-/* === Sección About refinada === */
+/* About.css */
+
+/* Contenedor principal de la sección About */
 .about {
-  background: rgba(10, 10, 20, 0.9);
+  background: rgba(10, 10, 20, 0.95);
   color: #e0e0e0;
   padding: 80px 20px;
   text-align: center;
 }
 
-.about h2 {
+/* Título "Sobre mí" con animación */
+.about-title {
   font-size: 2.5rem;
   color: #cfa2ff;
   text-shadow: 0 0 8px rgba(207, 162, 255, 0.4);
-  margin-bottom: 30px;
-  letter-spacing: 1px;
   font-weight: 600;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-.about-content {
-  max-width: 800px;
+/* Contenedor foto + texto */
+.about-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  text-align: left;
+  max-width: 900px;
   margin: 0 auto;
-  font-size: 1.08rem; /* Apenas más grande */
-  line-height: 1.8;
-  color: #f2f2f2;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
 }
 
+/* Texto descriptivo */
+.about-text {
+  flex: 1;
+}
+
+/* Foto de perfil */
+.about-photo img {
+  width: 160px; /* un poco más grande que antes */
+  height: 160px;
+  object-fit: cover;
+  object-position: top; /* centra la cabeza */
+  border-radius: 50%;
+  border: 4px solid #b57cff;
+  box-shadow: 0 4px 15px rgba(181, 124, 255, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(181, 124, 255, 0.7);
+}
+
+/* Destacar negritas */
 .about-content strong {
   color: #d6b4ff;
   text-shadow: 0 0 4px rgba(190, 140, 255, 0.3);
@@ -31,7 +66,7 @@
 /* Botón "Contáctame" */
 .about-btn {
   display: inline-block;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 12px 28px;
   font-size: 1rem;
   font-weight: 600;
@@ -50,30 +85,36 @@
   background: linear-gradient(90deg, #9f66ff, #6e2fff);
 }
 
-/* ==== Animaciones ==== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Animación fade-in */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 /* ==== Responsive ==== */
 @media (max-width: 768px) {
-  .about-content p {
-    font-size: 0.9rem;
+  .about-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .about h2 {
-    font-size: 1.6rem;
+  .about-photo img {
+    width: 150px; /* ligeramente más pequeña en móvil */
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
   }
 
   .about-btn {
-    padding: 0.7rem 1.4rem;
+    padding: 10px 22px;
     font-size: 0.9rem;
   }
 }
