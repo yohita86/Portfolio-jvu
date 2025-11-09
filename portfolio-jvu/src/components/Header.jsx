@@ -1,7 +1,11 @@
+import logo from "../assets/logo-jvu.png"; // <-- ajustá el path si es distinto
+
 function Header() {
   return (
     <header className="header">
-      <h1 className="logo">JVU 💜</h1>
+      <div className="logo-container">
+        <img src={logo} alt="JVU Logo" className="logo-img" />
+      </div>
       <nav>
         <a href="#about">Sobre mí</a>
         <a href="#skills">Habilidades</a>

@@ -10,6 +10,12 @@ const Home = () => {
           ¡Hola! Soy <span className="highlight">Johana Vanina Ullua</span>
         </h1>
         <h2>Desarrolladora Web Full Stack 💻</h2>
+
+        {/* Texto principal con efecto brillante */}
+        <div className="impact-line">
+          <span className="impact-text">De la idea al impacto 🚀</span>
+        </div>
+
         <p className="description">
           Apasionada por el diseño, la lógica y la creación de experiencias
           digitales únicas.
@@ -30,7 +36,7 @@ const Home = () => {
           Ver proyectos
         </a>
 
-        {/* Íconos sociales debajo */}
+        {/* Íconos sociales */}
         <div className="social-icons">
           <a
             href="https://github.com/yohita86"
@@ -57,6 +63,8 @@ const Home = () => {
             <FaWhatsapp />
           </a>
         </div>
+
+        {/* Enlaces CV */}
         <div className="cv-links">
           <a href="/cv-es.pdf" target="_blank" rel="noopener noreferrer">
             CV Español
