@@ -1,0 +1,191 @@
+/* HEADER PROYECTOS */
+.projects-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.projects-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #7b2cbf, #c77dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.projects-header p {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #d0cde1;
+  line-height: 1.6;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* Animación de entrada */
+.projects-header h2,
+.projects-header p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.projects-header p {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GRID DE PROYECTOS */
+.projects-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.project-card {
+  flex: 0 0 280px;
+  background: #1a1a1d;
+  border: 1px solid #7b2cbf;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  color: #f5f5f5;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.project-media {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.project-media img,
+.project-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+  color: #e0aaff;
+  font-size: 1.1rem;
+}
+
+.project-description {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  color: #d0cde1;
+}
+
+.project-tech {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: #bfa5f9;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.project-buttons a {
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #7b2cbf, #9d4edd);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.project-buttons a:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #9d4edd, #c77dff);
+}
+
+/* BOTONES DE SCROLL ESTÉTICOS */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg,#7b2cbf,#c77dff);
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(155,80,255,0.4);
+}
+
+.scroll-btn:hover {
+  transform: scale(1.25) rotate(5deg);
+  box-shadow: 0 0 20px rgba(155,80,255,0.7);
+}
+
+.scroll-btn.left {
+  left: -25px;
+}
+
+.scroll-btn.right {
+  right: -25px;
+}
+
+/* OCULTAR SCROLLBAR */
+.projects-grid::-webkit-scrollbar {
+  display: none;
+}
+.projects-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .project-card {
+    flex: 0 0 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 0 0 220px;
+  }
+  .scroll-btn {
+    font-size: 1.7rem;
+    padding: 8px 12px;
+  }
+}
