@@ -27,7 +27,7 @@ const Contact = () => {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          reply_to: formData.email // Permite responder directamente al usuario
+          reply_to: formData.email
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
