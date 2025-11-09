@@ -66,13 +66,25 @@ const Home = () => {
 
         {/* Enlaces CV */}
         <div className="cv-links">
-          <a href="/cv-es.pdf" target="_blank" rel="noopener noreferrer">
+          <a
+            href={`${import.meta.env.BASE_URL}cv-es.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             CV Español
           </a>
-          <a href="/cv-en.pdf" target="_blank" rel="noopener noreferrer">
+          <a
+            href={`${import.meta.env.BASE_URL}cv-en.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             CV Inglés
           </a>
-          <a href="/cv-pt.pdf" target="_blank" rel="noopener noreferrer">
+          <a
+            href={`${import.meta.env.BASE_URL}cv-pt.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             CV Portugués
           </a>
         </div>

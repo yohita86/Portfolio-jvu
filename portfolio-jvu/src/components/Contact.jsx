@@ -7,7 +7,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const [status, setStatus] = useState("");
@@ -27,12 +27,16 @@ const Contact = () => {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          reply_to: formData.email
+          reply_to: formData.email,
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then((response) => {
-        console.log("Mensaje enviado correctamente!", response.status, response.text);
+        console.log(
+          "Mensaje enviado correctamente!",
+          response.status,
+          response.text
+        );
         setStatus("Mensaje enviado correctamente!");
         setFormData({ name: "", email: "", message: "" });
         setTimeout(() => setStatus(""), 5000);
@@ -73,21 +77,61 @@ const Contact = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit" className="btn-primary">Enviar</button>
+        <button type="submit" className="btn-primary">
+          Enviar
+        </button>
         {status && <p className="status-msg">{status}</p>}
       </form>
 
       <div className="social-icons">
-        <a href="https://github.com/yohita86" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-        <a href="https://linkedin.com/in/johana-ullua/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-        <a href="mailto:yohanitaullua@gmail.com"><FaEnvelope /></a>
-        <a href="https://wa.me/5491169112950" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+        <a
+          href="https://github.com/yohita86"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://linkedin.com/in/johana-ullua/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin />
+        </a>
+        <a href="mailto:yohanitaullua@gmail.com">
+          <FaEnvelope />
+        </a>
+        <a
+          href="https://wa.me/5491169112950"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaWhatsapp />
+        </a>
       </div>
 
       <div className="cv-links">
-        <a href="/cv-es.pdf" target="_blank" rel="noopener noreferrer">CV Español</a>
-        <a href="/cv-en.pdf" target="_blank" rel="noopener noreferrer">CV Inglés</a>
-        <a href="/cv-pt.pdf" target="_blank" rel="noopener noreferrer">CV Portugués</a>
+        <a
+          href={`${import.meta.env.BASE_URL}cv-es.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CV Español
+        </a>
+        <a
+          href={`${import.meta.env.BASE_URL}cv-en.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CV Inglés
+        </a>
+        <a
+          href={`${import.meta.env.BASE_URL}cv-pt.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CV Portugués
+        </a>
       </div>
     </section>
   );
