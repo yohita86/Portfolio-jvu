@@ -4,7 +4,7 @@ import "./Projects.css";
 import turneroThumbnail from "../assets/portadavu.png";
 import turneroVideo from "../assets/videovu.mp4";
 import portfolioThumbnail from "../assets/paraportfolio.png";
-import portfolioVideo from "../assets/Videoportfolio.mp4";
+import portfolioVideo from "../assets/videoportfolio.mp4";
 import hrThumbnail from "../assets/HR1.png";
 import ecommerceThumbnail from "../assets/Portada-ecommerce.png";
 import Ecommercevideo from "../assets/video-ecommerce.mp4";
