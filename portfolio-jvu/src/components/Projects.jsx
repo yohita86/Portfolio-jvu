@@ -4,6 +4,7 @@ import "./Projects.css";
 import turneroThumbnail from "../assets/portadavu.png";
 import turneroVideo from "../assets/videovu.mp4";
 import portfolioThumbnail from "../assets/paraportfolio.png";
+import portfolioVideo from "../assets/Videoportfolio.mp4";
 import hrThumbnail from "../assets/HR1.png";
 import ecommerceThumbnail from "../assets/Portada-ecommerce.png";
 import Ecommercevideo from "../assets/video-ecommerce.mp4";
@@ -51,7 +52,7 @@ function Projects() {
         "Portfolio desarrollado en React para mostrar proyectos personales, habilidades y contacto. Implementa navegación con React Router, animaciones con framer-motion y envío de formularios con EmailJS.",
       tech: "React, framer-motion, EmailJS, React Icons, Vite",
       codeLink: "https://github.com/yohita86/portfolio-jvu",
-      demoLink: "#",
+      demoLink: portfolioVideo,
     },
   ];
 
