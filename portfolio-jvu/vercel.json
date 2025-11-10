@@ -1,18 +1,12 @@
+
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(cv-(es|en|pt)\\.pdf)",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/cv-es.pdf", "destination": "/cv-es.pdf" },
+    { "source": "/cv-en.pdf", "destination": "/cv-en.pdf" },
+    { "source": "/cv-pt.pdf", "destination": "/cv-pt.pdf" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
